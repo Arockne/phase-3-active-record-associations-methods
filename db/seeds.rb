@@ -1,7 +1,9 @@
+puts "Deleting previous..."
 Song.delete_all
 Genre.delete_all
 Artist.delete_all
 
+puts "Seeding data..."
 hotline_bling = Song.create(name: 'Hotline Bling')
 thriller = Song.create(name: 'Thriller')
 
@@ -19,3 +21,5 @@ mj.songs << thriller
 
 pop.songs << thriller
 rap.songs << hotline_bling
+
+puts "Finished Seeding!"
